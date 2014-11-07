@@ -1,0 +1,36 @@
+c:\users\stud3aii\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+c:\users\stud3aii\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+c:\users\stud3aii\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+c:\users\stud3aii\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+c:\users\stud3aii\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+c:\users\stud3aii\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+c:\users\stud3aii\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+c:\users\stud3aii\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+c:\users\stud3aii\documents\visual studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\stud3aii\Desktop\GiocoDellaVita\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\stud3aii\Desktop\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\stud3aii\Desktop\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\stud3aii\Desktop\GiocoDellaVita\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\stud3aii\Desktop\GiocoDellaVita\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\stud3aii\Desktop\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\stud3aii\Desktop\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\stud3aii\Desktop\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\stud3aii\Desktop\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\GiocoDellaVita.Form1.resources
+F:\GiocoDellaVita\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+F:\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+F:\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+F:\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+F:\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\GiocoDellaVita.Form1.resources
+F:\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+F:\GiocoDellaVita\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+F:\GiocoDellaVita\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+F:\GiocoDellaVita\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\stud3aii\Desktop\GiocoDellaVitaaa\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\stud3aii\Desktop\GiocoDellaVitaaa\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\stud3aii\Desktop\GiocoDellaVitaaa\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\stud3aii\Desktop\GiocoDellaVitaaa\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\stud3aii\Desktop\GiocoDellaVitaaa\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\stud3aii\Desktop\GiocoDellaVitaaa\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\stud3aii\Desktop\GiocoDellaVitaaa\WindowsFormsApplication1\obj\Debug\GiocoDellaVita.Form1.resources
+C:\Users\stud3aii\Desktop\GiocoDellaVitaaa\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\stud3aii\Desktop\GiocoDellaVitaaa\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
