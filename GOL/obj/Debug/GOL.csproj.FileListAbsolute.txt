@@ -1,2 +1,11 @@
 C:\Users\Admin\GiocoDellaVita\GOL\bin\Debug\WindowsFormsApplication1.exe.config
 C:\Users\Admin\GiocoDellaVita\GOL\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\obj\Debug\GOL.csprojResolveAssemblyReference.cache
+C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\obj\Debug\GiocoDellaVita.Form1.resources
+C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\obj\Debug\GOL.csproj.GenerateResource.Cache
+C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.exe

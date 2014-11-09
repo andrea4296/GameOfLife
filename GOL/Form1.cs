@@ -13,7 +13,7 @@ namespace GiocoDellaVita
 {
     public partial class Form1 : Form
     {
-        CampoDaGioco Field;
+        PlayGround Field;
         public Form1()
         {
             InitializeComponent();           
@@ -21,29 +21,31 @@ namespace GiocoDellaVita
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Field = new CampoDaGioco(this);            
+            Field = new PlayGround(this);            
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!Field.Load(Config.ESSERIVIVENTI.Volpe))
+            if (!Field.Load(Config.ESSERIVIVENTI.Fox))
                 MessageBox.Show(Config.OverFlowMessage);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (!Field.Load(Config.ESSERIVIVENTI.Coniglio))
+            if (!Field.Load(Config.ESSERIVIVENTI.Rabbit))
                 MessageBox.Show(Config.OverFlowMessage);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (!Field.Load(Config.ESSERIVIVENTI.Carota))
+            if (!Field.Load(Config.ESSERIVIVENTI.Carrot))
                 MessageBox.Show(Config.OverFlowMessage);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Field.Begin();
         }
+
+       
     }
 }
