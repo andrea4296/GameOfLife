@@ -12,7 +12,8 @@ namespace GiocoDellaVita
         private bool IsDead { set; get; }
         private int X { set; get; }
         private int Y { set; get; }
-        protected Config.ESSERIVIVENTI Alimentation;
+        protected Config.ALIMENTATION Alimentation;
+        public Config.ESSERIVIVENTI typeElement;
         public EssereVivente()
         {
         }
@@ -22,7 +23,12 @@ namespace GiocoDellaVita
             X = x;
             Y = y;
         }
-
+        public bool CanMove()
+        {
+            if (typeElement == Config.ESSERIVIVENTI.Carrot)
+                return false;
+            return true;
+        }
         public void Update()
         {
 

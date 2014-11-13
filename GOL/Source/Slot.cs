@@ -38,13 +38,13 @@ namespace GiocoDellaVita
         {
             if (Enable())
             {
-                if (eV.TypeElement == Config.ESSERIVIVENTI.Fox)
+                if (eV.typeElement == Config.ESSERIVIVENTI.Fox)
                     PlayGround.label1.Text = "Fox";
                 else
-                    if (eV.TypeElement == Config.ESSERIVIVENTI.Rabbit)
+                    if (eV.typeElement == Config.ESSERIVIVENTI.Rabbit)
                         PlayGround.label1.Text = "Rabbit";
                     else
-                        if (eV.TypeElement == Config.ESSERIVIVENTI.Carrot)
+                        if (eV.typeElement == Config.ESSERIVIVENTI.Carrot)
                             PlayGround.label1.Text = "Carrot";
             }
             else
@@ -66,7 +66,7 @@ namespace GiocoDellaVita
         public Config.ESSERIVIVENTI  removeEntity()
         {
             initSlot();
-            return eV.TypeElement;
+            return eV.typeElement;
         }
         public void loadEntity(Config.ESSERIVIVENTI entity)
         {
@@ -87,7 +87,7 @@ namespace GiocoDellaVita
                     pictureBox.Image = Resources.Carrot;
                     eV = new Carrot(X, Y);
                 }
-            eV.TypeElement = entity;
+            eV.typeElement = entity;
         }
         public void Move(ref int tmpX, ref int tmpY)
         {

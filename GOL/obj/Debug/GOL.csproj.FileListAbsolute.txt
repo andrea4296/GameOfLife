@@ -17,3 +17,4 @@ C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\GiocoDellaVita.Form1
 C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\GOL.csproj.GenerateResource.Cache
 C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\GOL.csprojResolveAssemblyReference.cache

@@ -30,7 +30,6 @@ namespace GiocoDellaVita
                     index ++;
                 }
             }
-
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(638, 214);
             label1.Name = "label1";
