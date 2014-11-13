@@ -9,3 +9,11 @@ C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\obj\Debug\GOL.cspr
 C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\bin\Debug\WindowsFormsApplication1.pdb
 C:\Users\Admin\GiocoDellaVita\GiocoDellaVita\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\GiocoDellaVita.Form1.resources
+C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\GOL.csproj.GenerateResource.Cache
+C:\Users\utente\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.exe

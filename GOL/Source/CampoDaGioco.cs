@@ -13,9 +13,9 @@ namespace GiocoDellaVita
     class PlayGround
     {       
         public static int entityCount = 0;
-        private Slot[,] Field;
+        public static Slot[,] Field;
         Random r = new Random();
-
+        public static Label label1 = new Label();
         public PlayGround(Form f)
         {
             int index = 0;
@@ -30,54 +30,58 @@ namespace GiocoDellaVita
                     index ++;
                 }
             }
+
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(638, 214);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(35, 13);
+            label1.TabIndex = 5;
+            f.Controls.Add(label1);            
         }
         public bool Load(Config.ESSERIVIVENTI e)
         {
             if (entityCount == Config.MAX_X * Config.MAX_Y)
                 return false;
             int x, y;
-           do
+            do
             {
                 x = r.Next(0, Config.MAX_X);
                 y = r.Next(0, Config.MAX_Y);
-            } while (isEnable(x, y)) ;
+            } while (isEnable(x, y));
             Field[x, y].loadEntity(e);
             entityCount++;
             return true;
         }
-        public bool isEnable(int x, int y)
-        {
-            if(x>=0 && y >= 0)
-           
-                return Field[x, y].Enable();
 
+        public static bool isEnable(int x, int y)
+        {
+            if(x>=0 && y >= 0)           
+                return Field[x, y].Enable();
             return false;
-            
-           
         }
+
         public Slot this[int a,int b]
         {
             get { return Field[a, b]; }
         }
         public void Begin()
         {
-           int x,y;
-           Slot s;
-           do
-           {
-               x = r.Next(0, Config.MAX_X);
-               y = r.Next(0, Config.MAX_Y);
-           } while (!isEnable(x, y));
-           s = Field[x, y];
+            int tmpX = 0, tmpY = 0;
+            Slot s;
             do
-           {
-               x = r.Next(-1, 1);
-               y = r.Next(-1, 1);
-             
-           } while (isEnable(s.X+x, s.Y+y));
-           s.removeEntity();
-          // s = Field[X+x, y+y];
-            
+            {
+                tmpX = r.Next(0, Config.MAX_X);
+                tmpY = r.Next(0, Config.MAX_Y);
+            } while (!isEnable(tmpX, tmpY));
+            s = Field[tmpX, tmpY];
+            s.Move(ref tmpX, ref tmpY);
+            //do
+            //{
+            //    tmpX = r.Next(-1, 2) + s.X;
+            //    tmpY = r.Next(-1, 2) + s.Y;
+            //} while (!(tmpX >= 0 && tmpX <= Config.MAX_X) && !(tmpY >= 0 && tmpY <= Config.MAX_Y));
+            Field[tmpX, tmpY].loadEntity(s.removeEntity()); 
+           
         }
     }
 }

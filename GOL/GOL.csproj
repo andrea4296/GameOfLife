@@ -44,12 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Source\EssereVivente.cs" />
     <Compile Include="Source\EsseriViventi\Animal.cs" />
     <Compile Include="Source\CampoDaGioco.cs" />
     <Compile Include="Source\EsseriViventi\Carrot.cs" />
     <Compile Include="Source\Config.cs" />
     <Compile Include="Source\EsseriViventi\Rabbit.cs" />
-    <Compile Include="Source\EsseriViventi\EssereVivente.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

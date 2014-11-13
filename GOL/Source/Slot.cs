@@ -7,41 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Properties;
 
 namespace GiocoDellaVita
-{
-     
+{     
     class Slot
     {
         Random r = new Random();
         public PictureBox pictureBox = new PictureBox();
-        public EssereVivente e{set;get;}
+        public EssereVivente eV{set;get;}
         public int X { get; set; }
         public int Y { get; set; }
         private bool isUsed;
         public Slot(int index, int x, int y)
-        {
-          
+        {          
             X = x;
             Y = y;
            
             pictureBox.BorderStyle = BorderStyle.FixedSingle;
+            
             pictureBox.Location = new Point((x * 48) + 50, (y * 47) + 50);
             pictureBox.Name = "pictureBox" + (index).ToString();
-            pictureBox.Click += new System.EventHandler(pictureBox1_Click);
-            pictureBox.Size = new Size(Config.IMAGE_WEIGHT, Config.IMAGE_HEIGHT);
+            pictureBox.MouseHover += new System.EventHandler(pictureBox1_Hover);
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox.Size = new Size(Config.IMAGE_WEIGHT, Config.IMAGE_HEIGHT);            
             pictureBox.Show();
             initSlot();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Hover(object sender, EventArgs e)
         {
-            MessageBox.Show( X.ToString()+ Y.ToString());
+            if (Enable())
+            {
+                if (eV.TypeElement == Config.ESSERIVIVENTI.Fox)
+                    PlayGround.label1.Text = "Fox";
+                else
+                    if (eV.TypeElement == Config.ESSERIVIVENTI.Rabbit)
+                        PlayGround.label1.Text = "Rabbit";
+                    else
+                        if (eV.TypeElement == Config.ESSERIVIVENTI.Carrot)
+                            PlayGround.label1.Text = "Carrot";
+            }
+            else
+                PlayGround.label1.Text = "";
         }
         public void initSlot()
         {
             isUsed = false;
-            pictureBox.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Field;
+            pictureBox.BackColor = Color.Green;
+            pictureBox.Image = Resources.Field;  
         }
         public Slot()
         {
@@ -49,37 +62,44 @@ namespace GiocoDellaVita
         public bool Enable()
         {
             return isUsed;
-        }
-        
-        public void removeEntity()
+        }        
+        public Config.ESSERIVIVENTI  removeEntity()
         {
             initSlot();
+            return eV.TypeElement;
         }
-        public void loadEntity( Config.ESSERIVIVENTI entity)
+        public void loadEntity(Config.ESSERIVIVENTI entity)
         {
-            isUsed = true;
+            isUsed = true;            
             if (entity == Config.ESSERIVIVENTI.Fox)
             {
-                pictureBox.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Fox;    
-                e = new Fox(X, Y);
-                
+                pictureBox.Image = Resources.Fox;    
+                eV = new Fox(X, Y);                
             }
             else
                 if (entity == Config.ESSERIVIVENTI.Rabbit)
                 {
-                    pictureBox.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Rabbit;                  
-                    e = new Rabbit(X, Y);
+                    pictureBox.Image = Resources.FedoRabbit;                  
+                    eV = new Rabbit(X, Y);
                 }
                 else
                 {
-                    pictureBox.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Carrot;
-                    e = new Carrot(X, Y);
-                }     
+                    pictureBox.Image = Resources.Carrot;
+                    eV = new Carrot(X, Y);
+                }
+            eV.TypeElement = entity;
         }
-        public void Move()
+        public void Move(ref int tmpX, ref int tmpY)
         {
-            int x = r.Next(0, Config.MAX_X);
-            int y = r.Next(0, Config.MAX_Y);
+            if (eV.CanMove())
+            {
+                do
+                {
+                    tmpX = r.Next(-1, 2) + X;
+                    tmpY = r.Next(-1, 2) + Y;
+                } while ( ((tmpX <= 0) || (tmpX >= Config.MAX_X)) || ((tmpY <= 0) || (tmpY >= Config.MAX_Y)) );
+                
+            }
         }
     }
 }
