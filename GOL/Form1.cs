@@ -14,11 +14,17 @@ namespace GiocoDellaVita
     public partial class Form1 : Form
     {
         PlayGround Field;
+        Timer t = new Timer();
         public Form1()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            t.Interval = 300; 
+            t.Tick += new EventHandler(timer_Tick);
         }
-
+        void timer_Tick(object sender, EventArgs e)
+        {
+            Field.Begin();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             Field = new PlayGround(this);            
@@ -44,9 +50,12 @@ namespace GiocoDellaVita
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Field.Begin();
+            t.Start();
         }
 
-       
+        private void button5_Click(object sender, EventArgs e)
+        {
+            t.Stop();
+        }
     }
 }

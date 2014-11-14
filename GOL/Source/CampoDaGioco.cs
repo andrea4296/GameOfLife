@@ -16,7 +16,6 @@ namespace GiocoDellaVita
         public static int entityCount = 0;
         public static Slot[,] Field;
         Random r = new Random();
-        public static Label label1 = new Label();
         public PlayGround(Form f)
         {
             int index = 0;
@@ -30,13 +29,7 @@ namespace GiocoDellaVita
                     f.Controls.Add(s.pictureBox);
                     index ++;
                 }
-            }
-            label1.AutoSize = true;
-            label1.Location = new Point(638, 214);
-            label1.Name = "label1";
-            label1.Size = new Size(35, 13);
-            label1.TabIndex = 5;
-            f.Controls.Add(label1);            
+            }           
         }
         public bool Load(Config.ESSERIVIVENTI e)
         {
@@ -104,7 +97,6 @@ namespace GiocoDellaVita
                 if ((herbAlive == 0 && vegetAlive == 0) || (herbAlive == 0 && carnAlive == 0))
                     flag = false;
                  */
-
             }
         }
     }

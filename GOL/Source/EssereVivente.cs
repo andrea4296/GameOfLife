@@ -24,12 +24,6 @@ namespace GiocoDellaVita
             X = x;
             Y = y;
         }
-       public bool CanMove()
-       {
-           return true;
-          /// return (int)Entity < (int)Config.ESSERIVIVENTI.MaxVegetable;//TODO operator >
- 
-        }
         public void Update()
         {
 
