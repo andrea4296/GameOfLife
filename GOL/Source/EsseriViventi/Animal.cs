@@ -28,7 +28,7 @@ namespace GiocoDellaVita
                 switch (AlimentationType)
                 {
                     case Config.ALIMENTATION.Carnivorous:
-                        if (enemyType > Config.ESSERIVIVENTI.MaxHerbivorous )
+                        if (enemyType < Config.ESSERIVIVENTI.MaxHerbivorous )
                             return true;
                         break;
 

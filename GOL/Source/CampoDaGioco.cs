@@ -81,12 +81,12 @@ namespace GiocoDellaVita
 
                 if (!(s.eV is Animale) ) {
                     Begin();
-                    continue;
+                    return;
                 }
                 if (Field[tmpX, tmpY].eV == null)
                 { 
                     Field[tmpX, tmpY].loadEntity(s.removeEntity());
-                    continue;
+                    return;
                 }
                 if (((Animale)s.eV).Eat(Field[tmpX, tmpY].eV.Entity))
                     Field[tmpX, tmpY].loadEntity(s.removeEntity());
