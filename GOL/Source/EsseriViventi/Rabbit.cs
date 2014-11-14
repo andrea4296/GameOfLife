@@ -12,7 +12,6 @@ namespace GiocoDellaVita
             : base(X, Y, Life, Alimentation)
         { 
         }
-        public Rabbit() { }
-
+        
     }
 }

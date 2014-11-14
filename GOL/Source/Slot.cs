@@ -13,6 +13,7 @@ namespace GiocoDellaVita
 {     
     class Slot
     {
+       
         Random r = new Random();
         public PictureBox pictureBox = new PictureBox();
         public EssereVivente eV{set;get;}
@@ -21,6 +22,7 @@ namespace GiocoDellaVita
         private bool isUsed;
         public Slot(int index, int x, int y)
         {          
+            
             X = x;
             Y = y;
            
@@ -28,30 +30,17 @@ namespace GiocoDellaVita
             
             pictureBox.Location = new Point((x * 48) + 50, (y * 47) + 50);
             pictureBox.Name = "pictureBox" + (index).ToString();
-            pictureBox.MouseHover += new System.EventHandler(pictureBox1_Hover);
+           // pictureBox.MouseHover += new System.EventHandler(pictureBox1_Hover);
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox.Size = new Size(Config.IMAGE_WEIGHT, Config.IMAGE_HEIGHT);            
             pictureBox.Show();
             initSlot();
         }
-        private void pictureBox1_Hover(object sender, EventArgs e)
-        {
-            if (Enable())
-            {
-                if (eV.typeElement == Config.ESSERIVIVENTI.Fox)
-                    PlayGround.label1.Text = "Fox";
-                else
-                    if (eV.typeElement == Config.ESSERIVIVENTI.Rabbit)
-                        PlayGround.label1.Text = "Rabbit";
-                    else
-                        if (eV.typeElement == Config.ESSERIVIVENTI.Carrot)
-                            PlayGround.label1.Text = "Carrot";
-            }
-            else
-                PlayGround.label1.Text = "";
-        }
+
         public void initSlot()
         {
+          
+            eV = null;
             isUsed = false;
             pictureBox.BackColor = Color.Green;
             pictureBox.Image = Resources.Field;  
@@ -65,11 +54,16 @@ namespace GiocoDellaVita
         }        
         public Config.ESSERIVIVENTI  removeEntity()
         {
-            initSlot();
-            return eV.typeElement;
+            Config.ESSERIVIVENTI e = eV.Entity;
+            PlayGround.entityCount -= 1;
+           initSlot();
+            return e;
+
+
         }
         public void loadEntity(Config.ESSERIVIVENTI entity)
         {
+           
             isUsed = true;            
             if (entity == Config.ESSERIVIVENTI.Fox)
             {
@@ -87,18 +81,21 @@ namespace GiocoDellaVita
                     pictureBox.Image = Resources.Carrot;
                     eV = new Carrot(X, Y);
                 }
-            eV.typeElement = entity;
+            eV.Entity = entity;
         }
-        public void Move(ref int tmpX, ref int tmpY)
+        public void GetNextPos(ref int risX, ref int risY)
         {
-            if (eV.CanMove())
+            int tmpX, tmpY;
+           
+           //if (eV.CanMove())
             {
                 do
                 {
                     tmpX = r.Next(-1, 2) + X;
                     tmpY = r.Next(-1, 2) + Y;
-                } while ( ((tmpX <= 0) || (tmpX >= Config.MAX_X)) || ((tmpY <= 0) || (tmpY >= Config.MAX_Y)) );
-                
+                } while ( ((tmpX <= 0) || (tmpX >= Config.MAX_X)) || ((tmpY <= 0) || (tmpY >= Config.MAX_Y) || (risX == tmpX && risY == tmpY) ) );
+                risX = tmpX;
+                risY = tmpY;
             }
         }
     }

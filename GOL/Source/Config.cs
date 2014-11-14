@@ -8,7 +8,7 @@ namespace GiocoDellaVita
 {
     class Config
     {
-        public enum ESSERIVIVENTI: int { Carrot, MaxVegetable, Rabbit, Fox }
+        public enum ESSERIVIVENTI: int {nil, Carrot, MaxVegetable, Rabbit, Fox }
         public enum ALIMENTATION : int { Herbivorous, Carnivorous, Omnivorous }
         public const int MAX_LIFE = 100;
         public const int MAX_X = 10;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GiocoDellaVita
 {
     class PlayGround
@@ -31,9 +32,9 @@ namespace GiocoDellaVita
                 }
             }
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(638, 214);
+            label1.Location = new Point(638, 214);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(35, 13);
+            label1.Size = new Size(35, 13);
             label1.TabIndex = 5;
             f.Controls.Add(label1);            
         }
@@ -73,13 +74,21 @@ namespace GiocoDellaVita
                 tmpY = r.Next(0, Config.MAX_Y);
             } while (!isEnable(tmpX, tmpY));
             s = Field[tmpX, tmpY];
-            s.Move(ref tmpX, ref tmpY);
-            //do
-            //{
-            //    tmpX = r.Next(-1, 2) + s.X;
-            //    tmpY = r.Next(-1, 2) + s.Y;
-            //} while (!(tmpX >= 0 && tmpX <= Config.MAX_X) && !(tmpY >= 0 && tmpY <= Config.MAX_Y));
-            Field[tmpX, tmpY].loadEntity(s.removeEntity()); 
+            s.GetNextPos(ref tmpX, ref tmpY);
+
+            if (!(s.eV is Animale) ) {
+                Begin();
+                return;
+            }
+            if (Field[tmpX, tmpY].eV == null)
+            { 
+                Field[tmpX, tmpY].loadEntity(s.removeEntity());
+                return;
+            }
+            Animale a = (Animale)s.eV;
+           
+            if (a.Eat(Field[tmpX, tmpY].eV.Entity))
+                Field[tmpX, tmpY].loadEntity(s.removeEntity()); 
            
         }
     }

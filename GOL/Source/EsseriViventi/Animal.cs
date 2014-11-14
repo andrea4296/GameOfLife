@@ -11,35 +11,33 @@ namespace GiocoDellaVita
     class Animale : EssereVivente 
     {
         protected Config.ALIMENTATION AlimentationType {set;get;}
-        public Animale()
-            : base ()
-        {}
+      
         public Animale(int X, int Y,int Life, Config.ALIMENTATION Alimentation)
             : base(X, Y, Life )
         {
 
 
         }
-        
+       
         public  bool Eat(Config.ESSERIVIVENTI enemyType)
         {
-            if ((int)AlimentationType > (int)enemyType) //TODO operatore >
+            if ((int)Entity > (int)enemyType) //TODO operatore >
             {
                 switch (AlimentationType)
                 {
                     case Config.ALIMENTATION.Carnivorous:
                         if (enemyType > Config.ESSERIVIVENTI.MaxVegetable)
                             return true;
-                            break;
-                           
-                    case  Config.ALIMENTATION.Herbivorous:
-                        if(enemyType < Config.ESSERIVIVENTI.MaxVegetable)
+                        break;
+
+                    case Config.ALIMENTATION.Herbivorous:
+                        if (enemyType < Config.ESSERIVIVENTI.MaxVegetable)
                             return true;
-                            break;
-                        
-                    case  Config.ALIMENTATION.Omnivorous:
+                        break;
+
+                    case Config.ALIMENTATION.Omnivorous:
                         return true;
-                        
+
                     default:
                         return false;//TODO eccezione  
                 }

@@ -13,7 +13,8 @@ namespace GiocoDellaVita
         private int X { set; get; }
         private int Y { set; get; }
         protected Config.ALIMENTATION Alimentation;
-        public Config.ESSERIVIVENTI typeElement;
+        public Config.ESSERIVIVENTI Entity;
+
         public EssereVivente()
         {
         }
@@ -23,16 +24,17 @@ namespace GiocoDellaVita
             X = x;
             Y = y;
         }
-        public bool CanMove()
-        {
-            if (typeElement == Config.ESSERIVIVENTI.Carrot)
-                return false;
-            return true;
+       public bool CanMove()
+       {
+           return true;
+          /// return (int)Entity < (int)Config.ESSERIVIVENTI.MaxVegetable;//TODO operator >
+ 
         }
         public void Update()
         {
 
         }
+        
 
     }
 }

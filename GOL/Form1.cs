@@ -41,6 +41,7 @@ namespace GiocoDellaVita
                 MessageBox.Show(Config.OverFlowMessage);
         }
 
+
         private void button4_Click(object sender, EventArgs e)
         {
             Field.Begin();
