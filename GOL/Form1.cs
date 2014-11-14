@@ -57,5 +57,10 @@ namespace GiocoDellaVita
         {
             t.Stop();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Config.GitUrl);
+        }
     }
 }

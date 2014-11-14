@@ -16,5 +16,6 @@ namespace GiocoDellaVita
         public const int IMAGE_HEIGHT = 50;
         public const int IMAGE_WEIGHT = 50;
         public static string OverFlowMessage = "Too much objects";
+        public static string GitUrl = "https://github.com/andrea4296/GameOfLife";
     }
 }
