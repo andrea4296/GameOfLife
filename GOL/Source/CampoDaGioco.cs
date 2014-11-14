@@ -66,30 +66,46 @@ namespace GiocoDellaVita
         }
         public void Begin()
         {
-            int tmpX = 0, tmpY = 0;
-            Slot s;
-            do
-            {
-                tmpX = r.Next(0, Config.MAX_X);
-                tmpY = r.Next(0, Config.MAX_Y);
-            } while (!isEnable(tmpX, tmpY));
-            s = Field[tmpX, tmpY];
-            s.GetNextPos(ref tmpX, ref tmpY);
+            bool flag = true;
+            while (flag)
+            {            
+                int tmpX = 0, tmpY = 0;
+                Slot s;
+                do
+                {
+                    tmpX = r.Next(0, Config.MAX_X);
+                    tmpY = r.Next(0, Config.MAX_Y);
+                } while (!isEnable(tmpX, tmpY));
+                s = Field[tmpX, tmpY];
+                s.GetNextPos(ref tmpX, ref tmpY);
 
-            if (!(s.eV is Animale) ) {
-                Begin();
-                return;
+                if (!(s.eV is Animale) ) {
+                    Begin();
+                    continue;
+                }
+                if (Field[tmpX, tmpY].eV == null)
+                { 
+                    Field[tmpX, tmpY].loadEntity(s.removeEntity());
+                    continue;
+                }
+                if (((Animale)s.eV).Eat(Field[tmpX, tmpY].eV.Entity))
+                    Field[tmpX, tmpY].loadEntity(s.removeEntity());
+                /*
+                int herbAlive=0, vegetAlive=0,carnAlive=0;
+                foreach (Slot q in Field)
+                {
+                    if (q.eV == null)
+                        herbAlive++;
+                    else if (q.eV.Entity > Config.ESSERIVIVENTI.MaxVegetable)
+                        carnAlive++;
+                    else if(q.eV.Entity < Config.ESSERIVIVENTI.MaxVegetable)
+                        vegetAlive++;
+                }
+                if ((herbAlive == 0 && vegetAlive == 0) || (herbAlive == 0 && carnAlive == 0))
+                    flag = false;
+                 */
+
             }
-            if (Field[tmpX, tmpY].eV == null)
-            { 
-                Field[tmpX, tmpY].loadEntity(s.removeEntity());
-                return;
-            }
-            Animale a = (Animale)s.eV;
-           
-            if (a.Eat(Field[tmpX, tmpY].eV.Entity))
-                Field[tmpX, tmpY].loadEntity(s.removeEntity()); 
-           
         }
     }
 }

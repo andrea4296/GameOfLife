@@ -15,23 +15,25 @@ namespace GiocoDellaVita
         public Animale(int X, int Y,int Life, Config.ALIMENTATION Alimentation)
             : base(X, Y, Life )
         {
-
+            AlimentationType = Alimentation;
 
         }
        
         public  bool Eat(Config.ESSERIVIVENTI enemyType)
+  
         {
             if ((int)Entity > (int)enemyType) //TODO operatore >
             {
+                
                 switch (AlimentationType)
                 {
                     case Config.ALIMENTATION.Carnivorous:
-                        if (enemyType > Config.ESSERIVIVENTI.MaxVegetable)
+                        if (enemyType > Config.ESSERIVIVENTI.MaxHerbivorous )
                             return true;
                         break;
 
                     case Config.ALIMENTATION.Herbivorous:
-                        if (enemyType < Config.ESSERIVIVENTI.MaxVegetable)
+                        if (enemyType < Config.ESSERIVIVENTI.MaxHerbivorous)
                             return true;
                         break;
 

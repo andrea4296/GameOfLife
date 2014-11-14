@@ -12,6 +12,5 @@ namespace GiocoDellaVita
             : base(X, Y, Life)
         { 
         }
-        public Carrot() { }
     }
 }

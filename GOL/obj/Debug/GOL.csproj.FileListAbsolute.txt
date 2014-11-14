@@ -27,3 +27,12 @@ C:\Users\Admin\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\GOL.csprojResolveAsse
 C:\Users\Admin\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\GiocoDellaVita.Form1.resources
 C:\Users\Admin\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Admin\Documents\GitHub\MyGameOfLife\GOL\obj\Debug\GOL.csproj.GenerateResource.Cache
+C:\Users\Andrea\Source\Repos\GameOfLife\GOL\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Andrea\Source\Repos\GameOfLife\GOL\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Andrea\Source\Repos\GameOfLife\GOL\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Andrea\Source\Repos\GameOfLife\GOL\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Andrea\Source\Repos\GameOfLife\GOL\obj\Debug\GOL.csprojResolveAssemblyReference.cache
+C:\Users\Andrea\Source\Repos\GameOfLife\GOL\obj\Debug\GiocoDellaVita.Form1.resources
+C:\Users\Andrea\Source\Repos\GameOfLife\GOL\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Andrea\Source\Repos\GameOfLife\GOL\obj\Debug\GOL.csproj.GenerateResource.Cache
+C:\Users\Andrea\Source\Repos\GameOfLife\GOL\obj\Debug\WindowsFormsApplication1.exe
